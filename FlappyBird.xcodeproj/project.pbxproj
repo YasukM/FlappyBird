@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E28A30B2014E451002D1D2C /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E28A3092014E451002D1D2C /* hit.mp3 */; };
+		5E28A30C2014E451002D1D2C /* titlebgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E28A30A2014E451002D1D2C /* titlebgm.mp3 */; };
 		5E295AE12008B9A800763D7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E295AE02008B9A800763D7F /* AppDelegate.swift */; };
 		5E295AE32008B9A800763D7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E295AE22008B9A800763D7F /* ViewController.swift */; };
 		5E295AE62008B9A800763D7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E295AE42008B9A800763D7F /* Main.storyboard */; };
@@ -14,9 +16,15 @@
 		5E295AEB2008B9A800763D7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E295AE92008B9A800763D7F /* LaunchScreen.storyboard */; };
 		5E295AF42008B9F000763D7F /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E295AF32008B9F000763D7F /* SpriteKit.framework */; };
 		5E295AF62008BCA200763D7F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E295AF52008BCA200763D7F /* GameScene.swift */; };
+		5E48F60F20145C4800E4DB87 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E48F60D20145C4800E4DB87 /* bgm.mp3 */; };
+		5E48F61020145C4800E4DB87 /* get.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5E48F60E20145C4800E4DB87 /* get.mp3 */; };
+		5E48F6122014C4D300E4DB87 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E48F6112014C4D300E4DB87 /* TitleScene.swift */; };
+		5EB764022015D6DF0049E5A4 /* PixelMplus12-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB764012015D6DF0049E5A4 /* PixelMplus12-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E28A3092014E451002D1D2C /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
+		5E28A30A2014E451002D1D2C /* titlebgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titlebgm.mp3; sourceTree = "<group>"; };
 		5E295ADD2008B9A800763D7F /* FlappyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E295AE02008B9A800763D7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E295AE22008B9A800763D7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +34,10 @@
 		5E295AEC2008B9A800763D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E295AF32008B9F000763D7F /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		5E295AF52008BCA200763D7F /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5E48F60D20145C4800E4DB87 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
+		5E48F60E20145C4800E4DB87 /* get.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = get.mp3; sourceTree = "<group>"; };
+		5E48F6112014C4D300E4DB87 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
+		5EB764012015D6DF0049E5A4 /* PixelMplus12-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PixelMplus12-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +52,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E28A30D2014E477002D1D2C /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				5E48F60D20145C4800E4DB87 /* bgm.mp3 */,
+				5E48F60E20145C4800E4DB87 /* get.mp3 */,
+				5E28A3092014E451002D1D2C /* hit.mp3 */,
+				5E28A30A2014E451002D1D2C /* titlebgm.mp3 */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 		5E295AD42008B9A800763D7F = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +88,11 @@
 				5E295AE42008B9A800763D7F /* Main.storyboard */,
 				5E295AE72008B9A800763D7F /* Assets.xcassets */,
 				5E295AF52008BCA200763D7F /* GameScene.swift */,
+				5E48F6112014C4D300E4DB87 /* TitleScene.swift */,
 				5E295AE92008B9A800763D7F /* LaunchScreen.storyboard */,
 				5E295AEC2008B9A800763D7F /* Info.plist */,
+				5EB764012015D6DF0049E5A4 /* PixelMplus12-Bold.ttf */,
+				5E28A30D2014E477002D1D2C /* Music */,
 			);
 			path = FlappyBird;
 			sourceTree = "<group>";
@@ -139,9 +165,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E28A30B2014E451002D1D2C /* hit.mp3 in Resources */,
 				5E295AEB2008B9A800763D7F /* LaunchScreen.storyboard in Resources */,
+				5E28A30C2014E451002D1D2C /* titlebgm.mp3 in Resources */,
+				5E48F61020145C4800E4DB87 /* get.mp3 in Resources */,
 				5E295AE82008B9A800763D7F /* Assets.xcassets in Resources */,
+				5EB764022015D6DF0049E5A4 /* PixelMplus12-Bold.ttf in Resources */,
 				5E295AE62008B9A800763D7F /* Main.storyboard in Resources */,
+				5E48F60F20145C4800E4DB87 /* bgm.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +186,7 @@
 				5E295AE32008B9A800763D7F /* ViewController.swift in Sources */,
 				5E295AF62008BCA200763D7F /* GameScene.swift in Sources */,
 				5E295AE12008B9A800763D7F /* AppDelegate.swift in Sources */,
+				5E48F6122014C4D300E4DB87 /* TitleScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +350,7 @@
 				5E295AF12008B9A800763D7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
