@@ -26,7 +26,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // スコア用
     var score = 0
     var itemScore = 0
-    var totalScore = 0
     var scoreLabelNode:SKLabelNode!
     var bestScoreLabelNode:SKLabelNode!
     var itemScoreLabelNode:SKLabelNode!
@@ -325,12 +324,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print("ScoreUp")
             score += 1
             scoreLabelNode.text = "Score:\(score)"
-            totalScoreLabelNode.text = "Total:\(totalScore)"
+            totalScoreLabelNode.text = "Total:\(score + itemScore)"
             
             // ベストスコア更新か確認する
             var bestScore = userDefaults.integer(forKey: "BEST")
-            if totalScore > bestScore {
-                bestScore = totalScore
+            if score + itemScore > bestScore {
+                bestScore = score + itemScore
                 bestScoreLabelNode.text = "BestScore:\(bestScore)"
                 userDefaults.set(bestScore, forKey: "BEST")
                 userDefaults.synchronize()
@@ -357,7 +356,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.run(sound)
             
             itemScoreLabelNode.text = "Item:\(itemScore)"
-            totalScoreLabelNode.text = "Total:\(totalScore)"
+            totalScoreLabelNode.text = "Total:\(score + itemScore)"
 
             
         }else {
@@ -388,6 +387,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabelNode.text = String("Score:\(score)")
         itemScore = 0
         itemScoreLabelNode.text = "Item:\(itemScore)"
+        totalScoreLabelNode.text = String("Total:\(score + itemScore)")
         
         bird.position = CGPoint(x: self.frame.size.width * 0.2, y:self.frame.size.height * 0.7)
         bird.physicsBody?.velocity = CGVector.zero
@@ -436,7 +436,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         itemScoreLabelNode.text = "Item:\(itemScore)"
         self.addChild(itemScoreLabelNode)
         
-        let totalScore = score + itemScore
         totalScoreLabelNode = SKLabelNode()
         totalScoreLabelNode.fontColor = UIColor.black
         totalScoreLabelNode.fontSize = 20
@@ -444,7 +443,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         totalScoreLabelNode.position = CGPoint(x:self.frame.size.width - 10 , y: self.frame.size.height - 20)
         totalScoreLabelNode.zPosition = 100 // 一番手前に表示する
         totalScoreLabelNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.right
-        totalScoreLabelNode.text = "Total:\(totalScore)"
+        totalScoreLabelNode.text = "Total:\(score + itemScore)"
         self.addChild(totalScoreLabelNode)
         
     }
